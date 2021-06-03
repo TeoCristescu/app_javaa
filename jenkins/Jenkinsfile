@@ -27,5 +27,8 @@ pipeline {
                 sh './jenkins/scripts/deliver.sh'
             }
         }
+        stage("run performance test") {
+        bzt "target/surefire-reports/*.xml"
+    }
     }
 }
