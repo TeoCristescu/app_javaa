@@ -1,5 +1,8 @@
 kind: pipeline
 type: docker
+platform:
+  os: linux
+  arch: arm64
 name: sleep-demos
 steps:
   - name: sleep5
