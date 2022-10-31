@@ -3,9 +3,7 @@ kind: pipeline
 type: docker
 
 steps:
-- name: test
+- name: test1
   image: alpine
   commands:
   - echo "It worked!"
-
-
