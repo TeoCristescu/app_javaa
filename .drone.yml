@@ -1,17 +1,11 @@
+name: drone-test
 kind: pipeline
 type: docker
 platform:
   os: linux
   arch: arm64
-name: sleep-demos
 steps:
-  - name: sleep5
-    image: busybox
-    pull: if-not-exists
-    commands:
-    - x=0;while [ $x -lt 5 ]; do echo "hello"; sleep 1; x=$((x+1)); done
-  - name: an error step
-    image: busybox
-    pull: if-not-exists
-    commands:
-    - yq --help
+- name: test1
+  image: alpine
+  commands:
+  - echo "It worked!"
